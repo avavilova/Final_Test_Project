@@ -1,1 +1,1 @@
-# Final_Test_Project - selenium tests for www.kinopoist.ru
+# Final_Test_Project - selenium tests for www.kinopoisk.ru
