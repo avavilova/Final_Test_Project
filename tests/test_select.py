@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from pages import *
@@ -11,13 +12,16 @@ def search_page(kinopoisk_main_page):
     yield kinopoisk_search_page
     kinopoisk_main_page.go_to_site()
 
-
+@allure.story("Search page")
+@allure.testcase("Country dropdown")
 def test_is_country_selected(search_page):
     search_page: SearchPage
     country_selected = "Беларусь"
     search_page.set_country(country_selected)
     assert search_page.get_current_country_text() == country_selected
 
+@allure.story("Search page")
+@allure.testcase("Genre dropdown")
 def test_is_genre_selected(search_page):
     search_page: SearchPage
     genre_selected = "биография"
